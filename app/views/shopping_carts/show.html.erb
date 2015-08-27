@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<% @products.each do |p| %>
+  <%= p.name %> <br>
+<% end %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shopping_cart.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @shopping_cart.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_shopping_cart_path(@shopping_cart) %> |
+<%= link_to 'Back', shopping_carts_path %>
